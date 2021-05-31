@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+
+<head>
+	<title>Skipbo</title>
+	<script src="Main.js"></script>
+	<script src="P.js"></script>
+	<script src="Spielfeld.js"></script>
+	<script src="Spielstand.js"></script>
+
+	<style>
+		body {
+			height: 100%;
+			font-family: 'Share Tech Mono', monospace;
+			font-size: 44px;
+			background: rgb(180, 216, 248);
+			color: rgb(13, 13, 14);
+			/* white-space:pre-wrap; enables line breaks */
+		}
+
+		#stackP1,
+		#stackP2 {
+			color: red;
+		}
+
+		button {
+			background-color: #375773;
+			border: none;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px 5px;
+			cursor: pointer;
+			border-radius: 12px;
+			width: 10%;
+			height: 60%;
+			box-shadow: 3px 3px 3px #375773;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<button id="xxx"
+			onclick="zug(1)"></button>
+		<button id="xxx"
+			onclick="spielstand.wechseln()"></button>
+		<input id="inputP1"
+			class="threer input"
+			name="input"
+			type="number"
+			value="5"><br>
+		<span id="p1">0</span>
+		<span id="stackP1">0</span><br>
+		<span id="desk">0</span><br>
+		<span id="p2">0</span>
+		<span id="stackP2">0</span><br>
+		<button id="xxx"
+			onclick="zug(2)"></button>
+		<button id="xxx"
+			onclick="spielstand.wechseln()"></button>
+		<input id="inputP2"
+			class="threer input"
+			name="input"
+			type="number"
+			value="5"><br>
+
+	</div>
+
+
+</body>
+<script>
+	var p1 = new p("p1");
+	var p2 = new p("p2");
+	var spielfeld = new SpielfeldKlasse();
+	var spielstand = new Spielstand();
+	init();
+</script>
+
+</html>
