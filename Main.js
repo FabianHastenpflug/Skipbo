@@ -2,8 +2,7 @@ function init(){
 	print();
 }
 
-
-function zug(diff) {
+function ablegen(diff) {
 	var cond1 = false;
 	var cond2 = false;
 	var handkartenPos = -1;
@@ -45,18 +44,8 @@ function zug(diff) {
 		spielfeld.stapel[stapelPos] = input;
 	}
 
-	// document.getElementById(idStringP).innerHTML = px.handkarten;
-	// document.getElementById("desk").innerHTML = spielfeld.stapel;
 	print();
-
-
 }
-
-
-
-
-
-
 
 function print() {
 	document.getElementById("p1").innerHTML = p1.handkarten;
@@ -66,7 +55,7 @@ function print() {
 	document.getElementById("desk").innerHTML = spielfeld.stapel;
 }
 
-function getRandom(min, max) { //von verschiedenen Tools verwendet. Generiert Zufallszahl
+function getRandom(min, max) {
 	min = Math.ceil(min);
 	max = Math.floor(max);
 	return Math.floor(Math.random() * (max - min + 1)) + min;

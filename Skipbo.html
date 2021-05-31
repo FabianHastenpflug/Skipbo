@@ -16,7 +16,6 @@
 			font-size: 44px;
 			background: rgb(180, 216, 248);
 			color: rgb(13, 13, 14);
-			/* white-space:pre-wrap; enables line breaks */
 		}
 
 		#stackP1,
@@ -39,7 +38,6 @@
 			width: 10%;
 			height: 60%;
 			box-shadow: 3px 3px 3px #375773;
-
 		}
 	</style>
 </head>
@@ -47,9 +45,9 @@
 <body>
 	<div>
 		<button id="xxx"
-			onclick="zug(1)"></button>
+			onclick="ablegen(1)">Ablegen</button>
 		<button id="xxx"
-			onclick="spielstand.wechseln()"></button>
+			onclick="spielstand.wechseln()">Zug beenden</button>
 		<input id="inputP1"
 			class="threer input"
 			name="input"
@@ -61,18 +59,15 @@
 		<span id="p2">0</span>
 		<span id="stackP2">0</span><br>
 		<button id="xxx"
-			onclick="zug(2)"></button>
+			onclick="ablegen(2)">Ablegen</button>
 		<button id="xxx"
-			onclick="spielstand.wechseln()"></button>
+			onclick="spielstand.wechseln()">Zug beenden</button>
 		<input id="inputP2"
 			class="threer input"
 			name="input"
 			type="number"
 			value="5"><br>
-
 	</div>
-
-
 </body>
 <script>
 	var p1 = new p("p1");
@@ -81,5 +76,3 @@
 	var spielstand = new Spielstand();
 	init();
 </script>
-
-</html>
