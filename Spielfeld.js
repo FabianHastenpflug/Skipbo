@@ -1,4 +1,4 @@
-class SpielfeldKlasse {
+class SpielfeldKlasse { //added this comment in web client
 	constructor() {
 		this.stapel = [5, 8, 4, 11];
 		this.weglegen = function () {
