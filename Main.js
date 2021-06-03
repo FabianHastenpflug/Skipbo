@@ -11,7 +11,7 @@ function ablegen(diff) {
 	var cond2 = false;
 	var vomRotenStapel = false;
 	var handkartenPos = -1;
-	var stapelPos = -1;
+	var stapelsPos = -1;
 	var idStringInput = "";
 	var idStringP = "";
 
@@ -43,8 +43,8 @@ function ablegen(diff) {
 		}
 	}
 	for (var i = 0; i < 4; i++) {
-		if (input == spielfeld.stapel[i] + 1) {
-			stapelPos = i;
+		if (input == spielfeld.stapels[i] + 1) {
+			stapelsPos = i;
 			cond2 = true;
 			if (input == 12) {
 				spielfeld.weglegen();
@@ -52,7 +52,7 @@ function ablegen(diff) {
 		}
 	}
 	if (cond1 && cond2) {
-		spielfeld.stapel[stapelPos] = input;
+		spielfeld.stapels[stapelsPos] = input;
 		if (vomRotenStapel){
 			px.stack.pop();
 		}
@@ -69,7 +69,7 @@ function print() {
 	document.getElementById("stackP1").innerHTML = p1.stack[p1.stack.length - 1];
 	document.getElementById("p2").innerHTML = p2.handkarten;
 	document.getElementById("stackP2").innerHTML = p2.stack[p2.stack.length - 1];
-	document.getElementById("desk").innerHTML = spielfeld.stapel;
+	document.getElementById("desk").innerHTML = spielfeld.stapels;
 }
 
 function getRandom(min, max) {

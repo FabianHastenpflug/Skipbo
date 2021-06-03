@@ -2,7 +2,7 @@ class p {
 	constructor(name) {
 		this.name = name;
 		this.stack = [8, 9, 5, 7, 6, 1, 12, 3];
-		this.handkarten = [6, 7, 8, 2, 12];
+		this.handkarten = [6, 7, 1, 2, 12];
 		console.log("p");
 
 	}
