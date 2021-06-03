@@ -1,4 +1,8 @@
 function init(){
+	p1 = new p("p1");
+	p2 = new p("p2");
+	spielfeld = new SpielfeldKlasse();
+	spielstand = new Spielstand();
 	print();
 }
 

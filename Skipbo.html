@@ -8,38 +8,7 @@
 	<script src="P.js"></script>
 	<script src="Spielfeld.js"></script>
 	<script src="Spielstand.js"></script>
-
-	<style>
-		body {
-			height: 100%;
-			font-family: 'Share Tech Mono', monospace;
-			font-size: 44px;
-			background: rgb(180, 216, 248);
-			color: rgb(13, 13, 14);
-		}
-
-		#stackP1,
-		#stackP2 {
-			color: red;
-		}
-
-		button {
-			background-color: #375773;
-			border: none;
-			color: white;
-			padding: 20px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 16px;
-			margin: 10px 5px;
-			cursor: pointer;
-			border-radius: 12px;
-			width: 10%;
-			height: 60%;
-			box-shadow: 3px 3px 3px #375773;
-		}
-	</style>
+	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -70,9 +39,9 @@
 	</div>
 </body>
 <script>
-	var p1 = new p("p1");
-	var p2 = new p("p2");
-	var spielfeld = new SpielfeldKlasse();
-	var spielstand = new Spielstand();
+	var p1;
+	var p2;
+	var spielfeld;
+	var spielstand;
 	init();
 </script>
