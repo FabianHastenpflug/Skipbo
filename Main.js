@@ -9,6 +9,7 @@ function init(){
 function ablegen(diff) {
 	var cond1 = false;
 	var cond2 = false;
+	var vomRotenStapel = false;
 	var handkartenPos = -1;
 	var stapelPos = -1;
 	var idStringInput = "";
@@ -28,10 +29,17 @@ function ablegen(diff) {
 
 	var input = parseInt(document.getElementById(idStringInput).value);
 
-	for (var i = 0; i < 5; i++) {
-		if (input == px.handkarten[i]) {
-			handkartenPos = i;
-			cond1 = true;
+	if (input == px.stack[px.stack.length - 1]){
+		input = px.stack[px.stack.length - 1]
+		cond1 = true;
+		vomRotenStapel = true;
+	}
+	else{
+		for (var i = 0; i < 5; i++) {
+			if (input == px.handkarten[i]) {
+				handkartenPos = i;
+				cond1 = true;
+			}
 		}
 	}
 	for (var i = 0; i < 4; i++) {
@@ -44,8 +52,13 @@ function ablegen(diff) {
 		}
 	}
 	if (cond1 && cond2) {
-		px.handkarten[handkartenPos] = 0;
 		spielfeld.stapel[stapelPos] = input;
+		if (vomRotenStapel){
+			px.stack.pop();
+		}
+		else{
+			px.handkarten[handkartenPos] = 0;
+		}
 	}
 
 	print();
