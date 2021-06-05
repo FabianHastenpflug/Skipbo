@@ -1,29 +1,70 @@
 body {
-			height: 100%;
-			font-family: 'Share Tech Mono', monospace;
-			font-size: 44px;
-			background: rgb(180, 216, 248);
-			color: rgb(13, 13, 14);
-		}
+    height: 100%;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 44px;
+    background: rgb(180, 216, 248);
+    color: rgb(13, 13, 14);
+}
 
-		#stackP1,
-		#stackP2 {
-			color: red;
-		}
+#stackP1, #stackP2 {
+    color: red;
+}
 
-		button {
-			background-color: #375773;
-			border: none;
-			color: white;
-			padding: 20px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 16px;
-			margin: 10px 5px;
-			cursor: pointer;
-			border-radius: 12px;
-			width: 10%;
-			height: 60%;
-			box-shadow: 3px 3px 3px #375773;
-		}
+.buttons {
+    background-color: #375773;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 10%;
+    height: 60%;
+    box-shadow: 3px 3px 3px #375773;
+}
+
+.handkarten:enabled {
+    background-color: #186425;
+    box-shadow: 3px 3px 3px #186425;
+}
+
+.handkarten:disabled {
+    background-color: #787b7e;
+    box-shadow: 3px 3px 3px #787b7e;
+}
+
+.handkarten, .ablagestapel {
+    color: white;
+    background-color: #375773;
+    box-shadow: 3px 3px 3px #375773;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    padding: 3%;
+    font-size: 55px;
+    margin: 10px 5px;
+    border-radius: 12px;
+    width: 13%;
+    height: 30%;
+}
+
+.red:enabled {
+    background-color: #4b0512;
+    box-shadow: 3px 3px 3px #4b0512;
+}
+
+.red:disabled {
+    background-color: #312e2f;
+    box-shadow: 3px 3px 3px #312e2f;
+}
+
+.content {
+    padding: 70px 0;
+    text-align: center;
+}
