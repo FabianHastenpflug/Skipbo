@@ -1,17 +1,26 @@
 class Spielstand {
 	constructor() {
-		this.zugP1 = true;
-		this.zugP2 = false;
-		console.log("Spielstand");
+		this.zugP1 = false;
+		this.wechseln();
 	}
 	wechseln = function () {
-		console.log("Spielstand.wechseln");
 
 		this.zugP1 = !this.zugP1;
-		this.zugP2 = !this.zugP2;
 		p1.nachziehen();
 		p2.nachziehen();
-		spielfeld.weglegen();
 		print();
+		this.zugP1 ? console.log("Spieler: " + p1.name) : console.log("Spieler: " + p2.name);
+		if (this.zugP1) {
+			for (let i = 0; i < 6; i++) {
+				document.getElementsByClassName('zwei')[i].disabled = true;
+				document.getElementsByClassName('eins')[i].disabled = false;
+			}
+		}
+		else {
+			for (let i = 0; i < 6; i++) {
+				document.getElementsByClassName('eins')[i].disabled = true;
+				document.getElementsByClassName('zwei')[i].disabled = false;
+			}
+		}
 	};
 }
