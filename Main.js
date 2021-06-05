@@ -29,7 +29,6 @@ function ablegen(diff) {
             if (diff.includes("_1")) { px.sp1.push(von); }
             if (diff.includes("_2")) { px.sp2.push(von); }
             if (diff.includes("_3")) { px.sp3.push(von); }
-            if (diff.includes("_4")) { px.sp4.push(von); }
 
             if (idVon.includes("_1")) { px.k1 = 0; }
             if (idVon.includes("_2")) { px.k2 = 0; }
@@ -63,7 +62,6 @@ function ablegen(diff) {
                 if (diff.includes("_1") && px.sp1.length > 0) { px.sp1.pop(); }
                 if (diff.includes("_2") && px.sp2.length > 0) { px.sp2.pop(); }
                 if (diff.includes("_3") && px.sp3.length > 0) { px.sp3.pop(); }
-                if (diff.includes("_4") && px.sp4.length > 0) { px.sp4.pop(); }
             }
             else {
                 if (diff.includes("_1")) { px.k1 = 0; }
@@ -93,11 +91,9 @@ function print() {
     document.getElementById("p1_speicher_1").innerHTML = p1.sp1[p1.sp1.length - 1];
     document.getElementById("p1_speicher_2").innerHTML = p1.sp2[p1.sp2.length - 1];
     document.getElementById("p1_speicher_3").innerHTML = p1.sp3[p1.sp3.length - 1];
-    document.getElementById("p1_speicher_4").innerHTML = p1.sp4[p1.sp4.length - 1];
     document.getElementById("p1_speicher_1").title = p1.sp1.slice(1);
     document.getElementById("p1_speicher_2").title = p1.sp2.slice(1);
     document.getElementById("p1_speicher_3").title = p1.sp3.slice(1);
-    document.getElementById("p1_speicher_4").title = p1.sp4.slice(1);
 
     document.getElementById("stpl_1").innerHTML = spielfeld.s1;
     document.getElementById("stpl_2").innerHTML = spielfeld.s2;
@@ -107,11 +103,9 @@ function print() {
     document.getElementById("p2_speicher_1").innerHTML = p2.sp1[p2.sp1.length - 1];
     document.getElementById("p2_speicher_2").innerHTML = p2.sp2[p2.sp2.length - 1];
     document.getElementById("p2_speicher_3").innerHTML = p2.sp3[p2.sp3.length - 1];
-    document.getElementById("p2_speicher_4").innerHTML = p2.sp4[p2.sp4.length - 1];
     document.getElementById("p2_speicher_1").title = p2.sp1.slice(1);
     document.getElementById("p2_speicher_2").title = p2.sp2.slice(1);
     document.getElementById("p2_speicher_3").title = p2.sp3.slice(1);
-    document.getElementById("p2_speicher_4").title = p2.sp4.slice(1);
 
     document.getElementById("p2_1").innerHTML = p2.k1;
     document.getElementById("p2_2").innerHTML = p2.k2;

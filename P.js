@@ -15,8 +15,6 @@ class p {
         this.sp1 = [0];
         this.sp2 = [0];
         this.sp3 = [0];
-        this.sp4 = [0];
-
     }
     nachziehen = function () {
         if (this.k1 == 0) { this.k1 = getRandom(1, 12) };
