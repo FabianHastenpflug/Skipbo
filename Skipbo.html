@@ -12,13 +12,21 @@
 </head>
 
 <body>
-    <div class="content">
+    <div>
         <div>
+            <button id="p1_speichern" class="button" onclick="speichern = true">⬇</button>
             <button id="p1_1" class="handkarten eins" onclick="ablegen('p1_1')">0</button>
             <button id="p1_2" class="handkarten eins" onclick="ablegen('p1_2')">0</button>
             <button id="p1_3" class="handkarten eins" onclick="ablegen('p1_3')">0</button>
             <button id="p1_4" class="handkarten eins" onclick="ablegen('p1_4')">0</button>
             <button id="p1_5" class="handkarten eins" onclick="ablegen('p1_5')">0</button>
+            <button id="p1_fertig" class="button" onclick="spielstand.wechseln()">✔</button>
+        </div>
+        <div>
+            <button id="p1_speicher_1" class="speicher" onclick="ablegen('p1_speicher_1')">0</button>
+            <button id="p1_speicher_2" class="speicher" onclick="ablegen('p1_speicher_2')">0</button>
+            <button id="p1_speicher_3" class="speicher" onclick="ablegen('p1_speicher_3')">0</button>
+            <button id="p1_speicher_4" class="speicher" onclick="ablegen('p1_speicher_4')">0</button>
             <button id="p1_r" class="handkarten eins red" onclick="ablegen('p1_r')">0</button>
         </div>
         <div>
@@ -26,15 +34,22 @@
             <button id="stpl_2" class="ablagestapel">0</button>
             <button id="stpl_3" class="ablagestapel">0</button>
             <button id="stpl_4" class="ablagestapel">0</button>
-            <button id="xxx" class="buttons" onclick="spielstand.wechseln()">Zug beenden</button>
         </div>
         <div>
+            <button id="p2_speicher_1" class="speicher" onclick="ablegen('p2_speicher_1')">0</button>
+            <button id="p2_speicher_2" class="speicher" onclick="ablegen('p2_speicher_2')">0</button>
+            <button id="p2_speicher_3" class="speicher" onclick="ablegen('p2_speicher_3')">0</button>
+            <button id="p2_speicher_4" class="speicher" onclick="ablegen('p2_speicher_4')">0</button>
+            <button id="p2_r" class="handkarten zwei red" onclick="ablegen('p2_r')">0</button>
+        </div>
+        <div>
+            <button id="p1_speichern" class="button" onclick="speichern = true">⬆</button>
             <button id="p2_1" class="handkarten zwei" onclick="ablegen('p2_1')">0</button>
             <button id="p2_2" class="handkarten zwei" onclick="ablegen('p2_2')">0</button>
             <button id="p2_3" class="handkarten zwei" onclick="ablegen('p2_3')">0</button>
             <button id="p2_4" class="handkarten zwei" onclick="ablegen('p2_4')">0</button>
             <button id="p2_5" class="handkarten zwei" onclick="ablegen('p2_5')">0</button>
-            <button id="p2_r" class="handkarten zwei red" onclick="ablegen('p2_r')">0</button>
+            <button id="p1_fertig" class="button" onclick="spielstand.wechseln()">✔</button>
         </div>
     </div>
 </body>
@@ -43,5 +58,10 @@
     var p2;
     var spielfeld;
     var spielstand;
+    var speichern = false;
+    var handkarteAusgewählt = false;
+    var von = "";
+    var idVon = "";
+    var aktionAusgefuehrt = true;
     init();
 </script>
