@@ -2,7 +2,7 @@ class p {
     constructor(name) {
         this.name = name;
         this.stack = ["win!"];
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 5; i++) {
             this.stack.push(getRandom(1, 12));
         }
         console.log(this.name + " " + this.stack);

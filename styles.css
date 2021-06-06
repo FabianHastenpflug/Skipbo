@@ -17,6 +17,16 @@ body {
     box-shadow: 3px 3px 3px #787b7e;
 }
 
+.red:enabled {
+    background-color: #4b0512;
+    box-shadow: 3px 3px 3px #4b0512;
+}
+
+.red:disabled {
+    background-color: #312e2f;
+    box-shadow: 3px 3px 3px #312e2f;
+}
+
 .speicher {
     background-color: #6594bd;
     box-shadow: 3px 3px 3px #4b7396;
@@ -45,14 +55,4 @@ body {
     border-radius: 12px;
     width: 13%;
     height: 30%;
-}
-
-.red:enabled {
-    background-color: #4b0512;
-    box-shadow: 3px 3px 3px #4b0512;
-}
-
-.red:disabled {
-    background-color: #312e2f;
-    box-shadow: 3px 3px 3px #312e2f;
 }
