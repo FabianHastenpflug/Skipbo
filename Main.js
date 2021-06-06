@@ -40,6 +40,7 @@ function ablegen(diff) {
             von = "";
             speichern = false;
             handkarteAusgewählt = false;
+            aktionAusgefuehrt = true;
             spielstand.wechseln()
             print();
         }
@@ -76,8 +77,8 @@ function ablegen(diff) {
 
         spielfeld.weglegen();
         print();
+        aktionAusgefuehrt = true;
     }
-    aktionAusgefuehrt = true;
 }
 
 function print() {
